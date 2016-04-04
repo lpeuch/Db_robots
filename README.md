@@ -2,18 +2,45 @@
 
 This database aims to gather as many robots as possible. Most of the robots are services oriented. 
 
-The database is only composed of one table for now.
- 1. robots_id
- 2. name
- 3. createdby
- 4. year
- 5. origin
- 6. website
- 7. type
- 8. usage_1
- 9. usage_2
- 10. usage_3
- 11. description
- 12. size
- 13. weight
- 14. price
+The database is composed of multiple tables :
+
+###robots
+ 1. robot_id / int (prim. key)
+ 2. name / varchar(25)
+ 3. created_by / varchar(35)
+ 4. year / int 
+ 5. origin / varchar(50)
+ 6. website / text
+ 7. usage_1 / varchar(25)
+ 8. usage_2 / varchar(25)
+ 9. usage_3 / varchar(25)
+ 10. description / text
+ 11. size / varchar(40)
+ 12. weight / varchar(30)
+ 13. price / varchar(40)
+
+###humanoid
+ 1. robot_id / int (foreign key)
+ 2. category / varchar(15)
+ 3. human_imitation / boolean
+ 
+###drone
+ 1. robot_id / int (foreign key)
+ 2. robor_nb / int
+ 3. blade_nb / int
+ 4. type / varchar(20)
+ 
+###biorobot
+ 1. robot_id / int (foreign key)
+ 2. animal / int
+ 3. plant / int
+
+###exoskeleton
+ 1. robot_id / int (foreign key)
+ 2. carrier / boolean
+ 3. leg_replacement / boolean
+
+###mobility
+ 1. robot_id / int (foreign key)
+ 2. type / varchar(10)
+
