@@ -39,8 +39,14 @@ The database is composed of multiple tables :
  1. robot_id / int (foreign key)
  2. carrier / boolean
  3. leg_replacement / boolean
+ 4. supported_weight / integer
 
 ###mobility
  1. robot_id / int (foreign key)
  2. type / varchar(10)
 
+###fictive
+ 1. robot_id / int (foreign key)
+ 2. show_type / varchar(15)
+ 3. show_theme / varchar(25)
+ 4. robot_type / varchar(20)
